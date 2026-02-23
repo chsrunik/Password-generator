@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+<div class="typing-container">
+    <span id="typing"></span>
+</div>
+
+<div class="container">
+    <h2>  Password Generator </h2>
+
+    <label>Password Length:</label>
+    <input type="number" id="length" min="4" max="50" value="12">
+
+    <div class="options">
+
+        <label class="cyber-check">
+            <input type="checkbox" id="uppercase" checked>
+            <span class="checkmark"></span>
+            Uppercase
+        </label>
+    
+        <label class="cyber-check">
+            <input type="checkbox" id="lowercase" checked>
+            <span class="checkmark"></span>
+            Lowercase
+        </label>
+    
+        <label class="cyber-check">
+            <input type="checkbox" id="numbers" checked>
+            <span class="checkmark"></span>
+            Numbers
+        </label>
+    
+        <label class="cyber-check">
+            <input type="checkbox" id="symbols">
+            <span class="checkmark"></span>
+            Symbols
+        </label>
+    
+    </div>
+
+    <div class="password-box">
+        <input type="text" id="password" readonly>
+    </div>
+    
+    <button class="copy-btn" onclick="copyPassword()">Copy</button>
+    
+    
+    <div class="strength-bar">
+        <div id="strength-fill"></div>
+    </div>
+    <p id="strength-text"></p>
+
+    <button class="generate-btn" onclick="generatePassword()">Generate</button>
+
+    <h3>History</h3>
+    <ul id="history"></ul>
+</div>
+<h3>👇🏻</h3>
+
+<button class="clear-btn" onclick="clearHistory()">
+     Clear History
+</button>
+
+<ul id="history"></ul>
+
+<footer>
+    <p>© 2026 Choppara Srunik</p>
+    <div class="social">
+        <a href="https://github.com/chsrunik" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/choppara-srunik-a74a0b241?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
